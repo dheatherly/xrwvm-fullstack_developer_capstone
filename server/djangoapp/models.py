@@ -7,11 +7,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class CarMake(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    fuel = [
-        ('GAS', 'gas'),
-        ('HYBRID', 'hybrid'),
-        ('EV', 'ev'),
-    ]
 
     def __str__(self):
         return self.name  # Return the name as the string representation
